@@ -1,0 +1,10 @@
+[server]
+# Disable the file watcher completely. Streamlit's default watcher
+# scans __path__ on every imported module, which causes the
+# transformers library to attempt importing torchvision (unused
+# vision submodules). This floods the terminal with ImportErrors.
+# Trade-off: you need to manually rerun the app after code changes.
+fileWatcherType = "none"
+
+[logger]
+level = "error"
